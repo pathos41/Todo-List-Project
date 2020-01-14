@@ -1,0 +1,12 @@
+<%- include("./partials/header") %>
+<div id="container">
+  <h1>To-do List <span id="plus"><i class="fa fa-plus"></i></span></h3>
+  <input type="text" placeholder="Add New Todo...">
+
+  <ul>
+    <% todos.forEach((todo) => { %>
+      <li><span class="icon"><i class="fas fa-trash-alt"></i></span> <%= todo.todo %></li>
+    <% }) %>
+  </ul>
+</div>
+<%- include("./partials/footer") %>
