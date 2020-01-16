@@ -21,7 +21,8 @@ h1{
   font-weight: normal;
 }
 
-.fa-plus{
+#plusOrMinus{
+  line-height: 29.6px;
   float: right;
 }
 
@@ -78,4 +79,23 @@ li:hover .icon{
 .done{
   text-decoration: line-through;
   color: grey;
+}
+
+.fa-edit{
+  float: right;
+  line-height: 40px;
+  margin-right: 10px;
+}
+
+.fa, .fas{
+  cursor: pointer;
+}
+
+.edit{
+  box-sizing: border-box;
+  height: 40px;
+}
+
+#new-todo{
+  display: none;
 }

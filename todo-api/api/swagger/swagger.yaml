@@ -68,17 +68,17 @@ paths:
           schema:
             $ref: "#/definitions/Todo"
       x-swagger-router-controller: "FindTodoById"
-      
+
+  /todo/update/{content}:    
     put:
-      description: "Update a todo by id"
-      operationId: "UpdateTodoById"
+      description: "Update a todo by content"
+      operationId: "UpdateTodoByContent"
       parameters: 
-        - name: "id"
+        - name: "content"
           in: "path"
-          description: "id of the todo to update"
+          description: "content of the todo to update"
           required: true
-          type: "integer"
-          format: "int64"
+          type: "string"
         
         - name: "updated_todo"
           in: "body"
@@ -91,10 +91,8 @@ paths:
           description: "Todo updated"
         400:
           description: "An error has occured"
-      x-swagger-router-controller: "UpdateTodoById"
-  /swagger:
-    x-swagger-pipe: swagger_raw
-    
+      x-swagger-router-controller: "UpdateTodoByContent"
+      
   /todo/delete/{content}:
     delete:
       description: "Delete a todo by content"
@@ -109,6 +107,9 @@ paths:
         204:
           description: "Todo deleted"
       x-swagger-router-controller: "DeleteTodoByContent"
+  
+  /swagger:
+    x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
 definitions:
   Todo:
@@ -122,14 +123,14 @@ definitions:
         description: "The todo item"
       datecreated:
         type: "string"
-        format: "date-time"
+        format: "date"
         description: "Timestamp when the todo was created, set by server"
       author:
         type: "string"
         description: "Creator or owner of the todo"
       duedate:
         type: "string"
-        format: "date-time"
+        format: "date"
         description: "When the todo is due"
       completed:
         type: "boolean"
