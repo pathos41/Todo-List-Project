@@ -5,4 +5,4 @@
  
  Created and modified RESTful API document through Swagger, and used AJAX to make API calls in the application.
  
- Connected to MongoDB using Mongoose, and implemented CRUD on the todo data.
+ Connected to MongoDB using Mongoose, and implemented CRUD operations on the todo data.
