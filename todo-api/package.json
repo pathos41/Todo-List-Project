@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "should": "^7.1.0",
-    "supertest": "^1.0.0",
+    "supertest": "^6.3.3",
     "swagger-editor": "^3.7.1"
   },
   "scripts": {
